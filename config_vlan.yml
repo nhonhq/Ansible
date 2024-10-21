@@ -4,7 +4,7 @@
   gather_facts: no
 
   task:
-    -  name: Default config interface Eth0/1
+    - name: Default config interface Eth0/1
       ios_l2_interface:
         name: Ethernet0/1
         state: unconfigured
