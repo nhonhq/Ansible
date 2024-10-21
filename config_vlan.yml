@@ -1,6 +1,6 @@
 ---
 - name: Set Ip Loobpack
-  hosts: all
+  hosts: Switch S-9
   gather_facts: no
 
   task:
