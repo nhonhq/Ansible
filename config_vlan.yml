@@ -3,7 +3,7 @@
   hosts: Switch S-9
   gather_facts: no
 
-  task:
+  tasks:
     - name: Default config interface Eth0/1
       ios_l2_interface:
         name: Ethernet0/1
