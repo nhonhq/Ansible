@@ -1,0 +1,19 @@
+---
+- name: Set Ip Loobpack
+  hosts: all
+  gather_facts: no
+
+  task:
+    -  name: Default config interface Eth0/1
+      ios_l2_interface:
+        name: e0/1
+        state: unconfigured
+    - name: Ensure GigabitEthernet0/5 is configured for access vlan 20
+      ios_l2_interface:
+        name: Eth0/2
+        mode: access
+        access_vlan: 20
+    - name: Delete vlan
+      ios_vlan:
+        vlan_id: 100
+        state: absent
